@@ -8,9 +8,13 @@ export const DEFAULT_FILEPATHS = [
   'fantasticonrc.json',
   '.fantasticonrc.js',
   'fantasticonrc.js',
+  '.fantasticonrc.cjs',
   'fantasticonrc.cjs',
+  '.fantasticonrc.mjs',
   'fantasticonrc.mjs',
+  '.fantasticonrc.mts',
   'fantasticonrc.mts',
+  '.fantasticonrc.cts',
   'fantasticonrc.cts',
 ];
 
