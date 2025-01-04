@@ -59,7 +59,6 @@
     "@types/jest": "29.5.14",
     "@types/node": "22.10.5",
     "@types/svg2ttf": "5.0.3",
-    "@types/svgicons2svgfont": "14.0.0",
     "@types/ttf2eot": "2.0.2",
     "@types/ttf2woff": "2.0.4",
     "@types/ttf2woff2": "2.0.2",
