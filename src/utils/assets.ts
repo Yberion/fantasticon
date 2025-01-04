@@ -1,9 +1,9 @@
 import { glob } from 'glob';
-import { resolve, relative, join } from 'path';
+import { join, relative, resolve } from 'path';
+import { GeneratedAssets } from '../generators/generate-assets';
+import { RunnerOptions } from '../types/runner';
 import { removeExtension, splitSegments } from '../utils/path';
 import { writeFile } from './fs-async';
-import { RunnerOptions } from '../types/runner';
-import { GeneratedAssets } from '../generators/generate-assets';
 
 export type WriteResult = { content: string | Buffer; writePath: string };
 
@@ -22,7 +22,7 @@ export interface AssetsMap {
 export const ASSETS_EXTENSION = 'svg';
 
 export const loadPaths = async (dir: string): Promise<string[]> => {
-  const globPath = join(dir, `**/*.${ASSETS_EXTENSION}`);
+  const globPath = join(dir, `**/*.${ASSETS_EXTENSION}`).replace(/\\/g,'/');
   const files = await glob(globPath, {});
 
   if (!files.length) {
