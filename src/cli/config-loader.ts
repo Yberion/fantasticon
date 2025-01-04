@@ -1,5 +1,5 @@
 import { join } from 'path';
-import { readFile, checkPath } from '../utils/fs-async';
+import { checkPath, readFile } from '../utils/fs-async';
 
 export const DEFAULT_FILEPATHS = [
   '.fantasticonrc',
@@ -7,7 +7,11 @@ export const DEFAULT_FILEPATHS = [
   '.fantasticonrc.json',
   'fantasticonrc.json',
   '.fantasticonrc.js',
-  'fantasticonrc.js'
+  'fantasticonrc.js',
+  'fantasticonrc.cjs',
+  'fantasticonrc.mjs',
+  'fantasticonrc.mts',
+  'fantasticonrc.cts',
 ];
 
 const attemptLoading = async (filepath: string): Promise<any | void> => {
